@@ -1,15 +1,126 @@
-:root{
-    --clr-whiteColor: #ffffff;
-    --mainTransition: all 0.3s linear;
+:root {
+  --clr-whiteColor: #ffffff;
+  --clr-hoverColor: #6c8ead;
+  --clr-secondHoverColor: ;
+  --clr-primaryColor: #2f2f2f;
+  --clr-secondPrimaryColor: #ec9a29;
+  --clr-primaryTitle: black;
+  --mainTransition: all 0.3s linear;
 }
 
+/* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: red;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(./media/bg.png);
+  line-height: 1.5;
+}
+
+.center-container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-whiteColor);
+}
+a:visited {
+  color: var(--clr-whiteColor);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--clr-hoverColor);
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: var(--clr-whiteColor) solid 2px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background: var(--clr-primaryColor);
+  border-radius: 0.5rem;
+}
+/* Header */
+/* Navigation */
+header nav div ul {
+  background: black;
+  position: fixed;
+  left: 2%;
+  z-index: 100;
+  min-width: 400px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 1rem 0 1rem 0;
+}
+nav li {
+  display: inline;
+  font-size: 1.2rem;
+}
+
+/* Circel */
+.circel {
+  background: var(--clr-primaryColor);
+  height: 900px;
+  width: 900px;
+  transform: translateY(-450px);
+  border-radius: 100%;
+  margin-bottom: -450px;
+  z-index: -99;
+}
+.circle-content {
+  transform: translateY(-450px);
+  color: var(--clr-whiteColor);
+  display: flex;
+  justify-content: left;
+}
+.circle-content h1 {
+  font-size: 8rem;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+.circle-content h2 {
+  max-width: 50%;
+}
+.circle-content p {
+  max-width: 50%;
 }
