@@ -13,18 +13,28 @@
     <body id="top">
       <header>
         <nav>
-          <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="about-me.html">Über mich</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-          </ul>
-        </nav>
+        <div class="center-container">
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a id="active" href="about-me.html">Über mich</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </div>
+      </nav>
+      <div class="center-container">
+        <div class="circel">
+        </div>
+        <div class="circle-content">
+          <h1>Portfolio</h1>
+          <h2>Julian Katz</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quas, explicabo quis et voluptates exercitationem molestiae, officia nostrum sed harum laborum distinctio.</p>
+          <a href="#" class="circel-icon"><i class="fab fa-facebook-square"></i></a>
+        </div>
       </header>
-      <main class="center-container">
-        <section>
-          <h1>Das hier ist eine Website über mich!</h1>
-          <p>Mein Name ist Julian Katz</p>
-          <p>Ich bin 22 Jahre alt.</p>
+      <main class="center-container  about-me">
+        <section class="facts">
+          <h3>Mein Name ist Julian Katz</h3>
+          <h3>Ich bin 22 Jahre alt.</h3>
           <h4>Meine Hobbys nach Wichtigkeit:</h4>
           <ol>
             <li>Calisthenics</li>
@@ -33,17 +43,14 @@
             <li>Kochen</li>
           </ol>
         </section>
-        <section>
-          <h2>Hier ist noch ein Bild von mir:</h2>
-          <img
+        <section>  
+          <h2>Über mich:</h2>
+          <div class="ich">
+          <img class="ich-img"
           src="./media/e177033eefdfcace38ec743d2f05dbc3.jpg"
           alt="eine Person"
           />
-        </section>
-        <section>
-          <h2>Hier noch ein spannender Text über mich:</h2>
-          <p>
-            Das erste Theatre Royal in Edinburgh wurde am 9. Dezember 1769 vom
+          <p class="ich-text">Das erste Theatre Royal in Edinburgh wurde am 9. Dezember 1769 vom
             Intendanten David Ross eröffnet. Ein Ereignis, welches der Dichter
             James Boswell in Versen festhielt.[1] In den 1780er Jahren trat hier
             u. a. Mary Bulkley auf.[2] Im Juli 1792 übernahm die Schauspielerin
@@ -73,40 +80,12 @@
             Das Theater war noch bis in die 1850er Jahre erfolgreich. 1859 wurde
             es zugunsten des General Post Office abgerissen (zu Anfang des neuen
             Jahrtausend entkernt und umgebaut zum „Waverley Gate“, einem
-            Bürokomplex mit integriertem Luxushotel[5]).
-          </p>
-          <a href="https://www.hs-furtwangen.de/">Hier studiere ich!</a>
-        </section>
-        <section>
-          <h2>
-            Hier ist ein Text um die Seite zu füllen damit der Anker benutzt
-            werden kann.
-          </h2>
-          <p>
-            Die Sandonie verläuft ausschließlich in flachliegenden
-            Oberkreideformationen des nördlichen Aquitanischen Beckens. Das
-            Quellgebiet liegt in Fossilkalken des Coniaciums. Nach der vollzogenen
-            Richtungsänderung südlich des Ortskerns von Léguillac-de-Cercles
-            schneidet sich der Fluss in tieferliegende Schichten des Oberen
-            Angoumiens (Oberturons) und anschließend des Unteren Angoumiens ein.
-            Die relativ resistenten Rudistenkalke des Angoumiens sind im Unteren
-            Angoumien (Angoulême-Formation) Steilwandbildner und wurden in
-            mehreren Steinbrüchen als Baustein abgebaut. In einigen Wänden wurden
-            auch Klausen aus dem Fels gehauen. Bei Loubazac nimmt die Sandonie ein
-            linksseitiges Trockental auf, dessen Verlauf eine Störung im
-            Schichtverband markiert. Weiter südwärts (südlich vom Weiler Breuil)
-            trifft die Sandonie dann auf die La-Tour-Blanche-Antiklinale, die sich
-            durch eine leichte Aufwölbung im Schichtverband und anhand von zwei
-            Störungen bemerkbar macht. Deswegen stehen in diesem Bereich auch die
-            stratigraphisch tieferen Schichten des Ligériens (plattige bis
-            knollige Kreidekalke) an. In der Nähe der Mündung säumt dann erneut
-            Unteres Angoumien mit darüberliegendem Oberen Angoumien das Flusstal,
-            beide Formationen sind jedoch an dieser Stelle in der kalkarenitischen
-            Fazies (typisch um Paussac-et-Saint-Vivien) ausgebildet.
-          </p>
+            Bürokomplex mit integriertem Luxushotel[5]).</p>
+          </div>
+          <a class="text-link" href="https://www.hs-furtwangen.de/">Hier studiere ich!</a>
         </section>
         <footer>
-          <p>Wenn du <a href="#top">hier</a> klickst springst du nach oben!</p>
+          <p>Wenn du <a href="#top" class="text-link">hier</a> klickst springst du nach oben!</p>
         </footer>
       </main>
     </div>

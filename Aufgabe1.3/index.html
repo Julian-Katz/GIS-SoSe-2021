@@ -9,20 +9,18 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/864d748141.js" crossorigin="anonymous"></script>
   </head>
-  <div>
   <body>
     <header>
       <nav>
         <div class="center-container">
         <ul>
-          <li><a href="index.html">Startseite</a></li>
+          <li><a id="active" href="index.html">Startseite</a></li>
           <li><a href="about-me.html">Über mich</a></li>
           <li><a href="contact.html">Kontakt</a></li>
         </ul>
       </div>
       </nav>
       <div class="center-container">
-
         <div class="circel">
         </div>
         <div class="circle-content">
@@ -32,35 +30,23 @@
           <a href="#" class="circel-icon"><i class="fab fa-facebook-square"></i></a>
         </div>
       </header>
-    </div>
       <main class="center-container">
       <article>
-        <h1>Meine Arbeiten:</h1>
-        <section>
-          <h4>Fotos</h4>
-          <div>
-            <img src="./media/fotos/1.jpg" alt="Vulkan" />
-            <img src="./media/fotos/2.jpg" alt="Vulkan" />
-            <img src="./media/fotos/3.jpg" alt="Wüste" />
-            <img src="./media/fotos/4.jpg" alt="Wald" />
-            <img src="./media/fotos/5.jpg" alt="Himmel am Meer" />
+        <section></section>
+          <h2>Foto</h2>
+          <div class="images">
+            <div class="image"><img src="./media/fotos/1.jpg" alt="Vulkan" /></div>
+            <div class="image"><img src="./media/fotos/2.jpg" alt="Vulkan" /></div>
+            <div class="image"><img src="./media/fotos/3.jpg" alt="Wüste" /></div>
+            <div class="image"><img src="./media/fotos/4.jpg" alt="Wald" /></div>
+            <div class="image"><img src="./media/fotos/5.jpg" alt="Himmel am Meer" /></div>
           </div>
         </section>
         <section>
-          <h4>Videos</h4>
-          <div>
-            <video controls autoplay>
-              <source src="./media/videos/1.mp4" />
-            </video>
-            <video src="./media/videos/2.mp4" controls autoplay loop></video>
-          </div>
-        </section>
-        <section>
-          <h4>Audio</h4>
-          <div>
-            <audio controls>
-              <source src="./media/audio/565943__bectec__yes.mp3" />
-            </audio>
+          <h2>Video</h2>
+          <div class="videos">
+            <div class="video"><video src="./media/videos/1.mp4" autoplay loop muted></video></div>
+            <div class="video"><video src="./media/videos/2.mp4" autoplay loop></video></div>
           </div>
         </section>
       </article>

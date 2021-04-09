@@ -42,7 +42,7 @@ h1 {
   font-size: 3rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 h3 {
   font-size: 1.25rem;
@@ -57,10 +57,6 @@ p {
 a {
   text-decoration: none;
   color: var(--clr-whiteColor);
-}
-a:visited {
-  color: var(--clr-whiteColor);
-  text-decoration: none;
 }
 a:hover {
   color: var(--clr-hoverColor);
@@ -77,12 +73,14 @@ li {
   font-size: 1rem;
   background: var(--clr-primaryColor);
   border-radius: 0.5rem;
+  color: var(--clr-whiteColor);
 }
 /* Header */
 /* Navigation */
 header nav div ul {
   background: var(--clr-primaryColor);
   position: fixed;
+  top: 0;
   left: 2%;
   z-index: 100;
   min-width: 400px;
@@ -101,14 +99,14 @@ nav li {
   background: var(--clr-primaryColor);
   height: 900px;
   width: 900px;
-  transform: translateY(-450px);
   border-radius: 100%;
-  margin-bottom: -450px;
   z-index: -99;
+  margin-top: -450px;
 }
 .circle-content {
-  transform: translateY(-450px);
   color: var(--clr-whiteColor);
+  margin-top: -450px;
+  margin-bottom: 100px;
 }
 .circle-content h1 {
   font-size: 8rem;
@@ -127,4 +125,77 @@ nav li {
 .circel-icon i {
   font-size: 2rem;
   transform: translateX(450px);
+}
+
+main {
+  color: var(--clr-primaryColor);
+}
+
+.images {
+  margin-bottom: 4rem;
+}
+.image {
+  height: 8rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+/* .image-container:hover {
+  height: 100%;
+} */
+.images img {
+  transform: translateY(-50%);
+}
+/* .image-container img:hover {
+  transform: translateY(0);
+} */
+
+.videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.facts {
+  margin-bottom: 4rem;
+}
+.ich {
+  display: flex;
+  justify-content: space-between;
+}
+.ich-img {
+  width: 200px;
+  height: 300px;
+}
+
+.ich-text {
+  width: 70%;
+}
+
+.text-link {
+  color: var(--clr-hoverColor);
+}
+/* Form */
+form {
+  color: var(--clr-primaryColor);
+  font-size: 1.2rem;
+}
+
+input,
+textarea {
+  background: rgb(245, 245, 245);
+  border: 1px solid var(--clr-primaryColor);
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+}
+textarea {
+  margin: 0.5rem;
+}
+main {
+  padding-bottom: 5rem;
+}
+#active {
+  color: var(--clr-secondPrimaryColor);
 }
