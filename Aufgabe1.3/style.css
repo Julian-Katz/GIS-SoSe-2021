@@ -81,7 +81,7 @@ li {
 /* Header */
 /* Navigation */
 header nav div ul {
-  background: black;
+  background: var(--clr-primaryColor);
   position: fixed;
   left: 2%;
   z-index: 100;
@@ -109,8 +109,6 @@ nav li {
 .circle-content {
   transform: translateY(-450px);
   color: var(--clr-whiteColor);
-  display: flex;
-  justify-content: left;
 }
 .circle-content h1 {
   font-size: 8rem;
@@ -120,7 +118,13 @@ nav li {
 }
 .circle-content h2 {
   max-width: 50%;
+  transform: translateX(450px);
 }
 .circle-content p {
-  max-width: 50%;
+  max-width: 35%;
+  transform: translateX(450px);
+}
+.circel-icon i {
+  font-size: 2rem;
+  transform: translateX(450px);
 }
