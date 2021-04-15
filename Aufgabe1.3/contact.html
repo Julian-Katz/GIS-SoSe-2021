@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontakt</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/864d748141.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <div>
-    <header>
-      <nav>
-        <div class="">
-          <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="about-me.html">Über mich</a></li>
-            <li><a id="active" href="contact.html">Kontakt</a></li>
-          </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/864d748141.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div>
+      <header>
+        <nav>
+          <div class="center-container">
+            <ul>
+              <li><a href="index.html">Startseite</a></li>
+              <li><a href="about-me.html">Über mich</a></li>
+              <li><a id="active" href="contact.html">Kontakt</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="center-container">
+          <div class="circel"></div>
+          <div class="circle-content">
+            <h1>Portfolio</h1>
+            <h2>Julian Katz</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+              quas, explicabo quis et voluptates exercitationem molestiae,
+              officia nostrum sed harum laborum distinctio.
+            </p>
+            <a href="#" class="circel-icon"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+          </div>
         </div>
-      </nav>
-      <div class="center-container">
-        <div class="circel"></div>
-        <div class="circle-content">
-          <h1>Portfolio</h1>
-          <h2>Julian Katz</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            quas, explicabo quis et voluptates exercitationem molestiae,
-            officia nostrum sed harum laborum distinctio.
-          </p>
-          <a href="#" class="circel-icon"><i class="fab fa-facebook-square"></i></a>
-        </div>
-      </div>
-    </header>
-    <main class="center-container">
-      <section>
-        <h2>Kontatformular</h2>
-        <div>
-          <form action="#">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-            <label for="e-mail">E-mail:</label>
-            <input type="email" id="e-mail" name="email" required />
-            <label for="telefonnummer">Telefonnummer:</label>
-            <input type="tel" id="telefonnummer" name="telefonnummer" />
-            <label for="nachricht">Nachricht:</label>
-            <textarea name="nachricht" id="nachricht" cols="30" rows="10" required></textarea>
-            <button class="btn" type="submit">Abschicken</button>
-          </form>
-        </div>
-      </section>
-    </main>
-  </div>
-</body>
-
+      </header>
+      <main class="center-container">
+        <section>
+          <h2>Kontatformular</h2>
+          <div>
+            <form action="#">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+              <label for="e-mail">E-mail:</label>
+              <input type="email" id="e-mail" name="email" required />
+              <label for="telefonnummer">Telefonnummer:</label>
+              <input type="tel" id="telefonnummer" name="telefonnummer" />
+              <label for="nachricht">Nachricht:</label>
+              <textarea
+                name="nachricht"
+                id="nachricht"
+                cols="30"
+                rows="10"
+                required
+              ></textarea>
+              <button class="btn" type="submit">Abschicken</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>

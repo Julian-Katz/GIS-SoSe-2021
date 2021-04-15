@@ -22,7 +22,7 @@ body {
 
 .center-container {
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 900px;
 }
 
 img,
@@ -74,12 +74,6 @@ li {
   border-radius: 0.5rem;
   color: var(--clr-whiteColor);
 }
-@keyframes a {
-  from {
-  transform: rotate(0deg);}
-  to { color: blue;
-  transform: rotate(360deg);}
-}
 /* Header */
 /* Navigation */
 header nav div ul {
@@ -102,11 +96,11 @@ nav li {
 /* Circel */
 .circel {
   background: var(--clr-primaryColor);
-  height: 1024px;
-  width: 1024px;
+  height: 900px;
+  width: 900px;
   border-radius: 100%;
   z-index: -99;
-  margin-top: -600px;
+  margin-top: -450px;
 }
 .circle-content {
   color: var(--clr-whiteColor);
@@ -118,8 +112,6 @@ nav li {
   text-transform: uppercase;
   text-align: center;
   width: 100%;
-  animation-name: a;
-  animation-duration: 4s;
 }
 .circle-content h2 {
   max-width: 50%;
@@ -146,9 +138,16 @@ main {
   overflow: hidden;
   margin-bottom: 1rem;
 }
+/* .image-container:hover {
+  height: 100%;
+} */
 .images img {
   transform: translateY(-50%);
 }
+/* .image-container img:hover {
+  transform: translateY(0);
+} */
+
 .videos {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -199,64 +198,3 @@ main {
 #active {
   color: var(--clr-secondPrimaryColor);
 }
-@media screen and (max-width: 1024px){
-  .center-container{
-    max-width: 600px;
-  }
-  .circel{
-  display: none;
-  }
-  .circle-content h1 {
-  color: var(--clr-primaryColor);
-  font-size: 5rem;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 5rem;
-}
-.circle-content {
-  color: var(--clr-whiteColor);
-  margin-top: 0;
-  margin-bottom: 2rem;
-}
-.circle-content h2 {
-  color: var(--clr-primaryColor);
-  transform: translateX(0);
-  text-align: center;
-  max-width: 100%;
-}
-.circle-content p {
-  display: none;
-}
-.circel-icon i {
-display: none;
-}
-header nav div ul {
-  display: flex;
-}
-.ich {
-  display: block;
-}
-.ich-img {
-  width: 100%;
-  height: 100%;
-}
-
-.ich-text {
-  width: 100%;
-}
-}
-@media screen and (max-width: 600px){
-  .center-container{
-    margin: 0 1rem;
-  }
-  .circel{
-display: none;
-  }
-  .circle-content h1 {
-  font-size: 2rem;
-}
-.circle-content h2 {
-  font-size: 2rem;
-}
-}
-
