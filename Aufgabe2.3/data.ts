@@ -1,5 +1,5 @@
-let angebotWaffeln: Waffel[] = [new Waffel("Knusper", "normal", 1.20), new Waffel("Knusper", "groß", 1.80), new Waffel("Becher", "normal", 0), new Waffel("Becher", "groß", 0)];
-let angebotEisskugeln: Eiskugel[] = [new Eiskugel("Vanille"), new Eiskugel("Schokolade"), new Eiskugel("Erdbere")];
-let angebotToppings: Topping[] = [new Topping("Sahne", 1), new Topping("Streusel", 1), new Topping("Erdberen", 2.5)];
+let angebotWaffeln: Waffel[] = [{ art: "Knusper", größe: "normal", preis: 1.20 }, { art: "Knusper", größe: "groß", preis: 1.80 }, { art: "Becher", größe: "normal", preis: 0 }, { art: "Becher", größe: "groß", preis: 0 }];
+let angebotEisskugeln: Eiskugel[] = [{ geschmack: "Vanille", preis: 1.80 }, { geschmack: "Schokolade", preis: 1.80 }, { geschmack: "Erdbere", preis: 1.80 }];
+let angebotToppings: Topping[] = [{ art: "Sahne", preis: 1 }, { art: "Streusel", preis: 1 }, { art: "Erdberen", preis: 2.5 }];
 // console.log(JSON.stringify(angebotToppings));
 
