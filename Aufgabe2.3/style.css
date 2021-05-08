@@ -37,6 +37,7 @@ h1,h2,h3,h4,h5,h6 {
     position: relative;
     overflow: hidden;
     margin-bottom: 4rem;
+    border-radius: 10px;
 }
 .randomRec{
     position: absolute;
@@ -52,8 +53,10 @@ h1,h2,h3,h4,h5,h6 {
 .orderEis {
     background: rgb(224, 224, 224);
     padding: 2rem;
+    border-radius: 10px;
 }
 .options {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
