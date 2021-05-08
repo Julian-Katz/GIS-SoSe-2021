@@ -1,3 +1,4 @@
+// Aufgabe 1
 let newRecBtn: HTMLElement = document.getElementById("newRec");
 let resetRec: HTMLElement = document.getElementById("resetRecs");
 
@@ -19,7 +20,8 @@ newRecBtn.addEventListener("click", function (): void {
     console.log(randomDiv);
 
 });
-
+// Ende - Aufgabe 1
+// Eis Datenstruktur
 interface EisKonfiguration {
     waffel: Waffel;
     eiskugeln: Eiskugel[];
@@ -58,6 +60,9 @@ class Topping {
         this.preis = _preis;
     }
 }
+// Ende - Eis Datenstruktur
 
+// Eis zusammenstellen
 let eis1: EisKonfiguration = { waffel: angebotWaffeln[1], eiskugeln: [angebotEisskugeln[1]], toppings: [angebotToppings[1]], preis: 2 };
 console.log(eis1);
+// Ende - Eis zusammenstellen

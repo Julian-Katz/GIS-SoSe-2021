@@ -1,4 +1,5 @@
 "use strict";
+// Aufgabe 1
 let newRecBtn = document.getElementById("newRec");
 let resetRec = document.getElementById("resetRecs");
 let recFrame = document.getElementById("recFrame");
@@ -35,6 +36,9 @@ class Topping {
         this.preis = _preis;
     }
 }
+// Ende - Eis Datenstruktur
+// Eis zusammenstellen
 let eis1 = { waffel: angebotWaffeln[1], eiskugeln: [angebotEisskugeln[1]], toppings: [angebotToppings[1]], preis: 2 };
 console.log(eis1);
+// Ende - Eis zusammenstellen
 //# sourceMappingURL=script.js.map
