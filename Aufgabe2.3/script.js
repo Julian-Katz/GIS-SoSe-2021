@@ -1,5 +1,4 @@
 "use strict";
-// Aufgabe 1
 let newRecBtn = document.getElementById("newRec");
 let resetRec = document.getElementById("resetRecs");
 let recFrame = document.getElementById("recFrame");
@@ -17,26 +16,7 @@ newRecBtn.addEventListener("click", function () {
     recFrame.appendChild(randomDiv);
     console.log(randomDiv);
 });
-class Waffel {
-    constructor(_art, _größe, _preis) {
-        this.art = _art;
-        this.größe = _größe;
-        this.preis = _preis;
-    }
-}
-class Eiskugel {
-    constructor(_geschmack) {
-        this.geschmack = _geschmack;
-        this.preis = 1.80;
-    }
-}
-class Topping {
-    constructor(_art, _preis) {
-        this.art = _art;
-        this.preis = _preis;
-    }
-}
-// Ende - Eis Datenstruktur
+// Ende - Aufgabe 1
 // Eis zusammenstellen
 let eis1 = { waffel: angebotWaffeln[1], eiskugeln: [angebotEisskugeln[1]], toppings: [angebotToppings[1]], preis: 2 };
 console.log(eis1);
