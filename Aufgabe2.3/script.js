@@ -19,25 +19,42 @@ newRecBtn.addEventListener("click", function () {
 // Ende - Aufgabe 1
 // Load dynamik content
 window.addEventListener("load", function () {
-    insertOptionsEis();
+    displayOptionsOfKategorie(angebotWaffeln);
     console.log("Dom load Event ausgeführt");
 });
 // Ende - Load dynamik content
 // Eis Options laden
 let optionsEis = document.getElementById("optionsEis");
-function insertOptionsEis() {
-    angebotWaffeln.forEach(element => {
+let kategorie = document.getElementById("kategorie");
+// Temp Cart
+let tempWaffel;
+let tempEisKofiguration;
+// Ende - Temp Cart
+function displayOptionsOfKategorie(_displayItems) {
+    _displayItems.forEach(element => {
         let domItem = document.createElement("div");
         domItem.classList.add("btn", "options");
-        domItem.innerText = `${element[0]} - ${element.größe} - ${element.preis}€`;
-        console.log(element);
-        console.log(domItem);
+        let displayText = "";
+        for (const key in element) {
+            displayText = displayText + element[key];
+            if (key === "preis") {
+                displayText += " €";
+            }
+            else {
+                displayText += " - ";
+            }
+        }
+        domItem.innerText = displayText;
+        domItem.addEventListener("click", function () {
+            // console.log(element);
+            tempWaffel = element;
+        });
         optionsEis.appendChild(domItem);
     });
 }
+console.log(tempWaffel);
 // Ende - Eis Options laden
 // Eis zusammenstellen
 let eis1 = { waffel: angebotWaffeln[1], eiskugeln: [angebotEisskugeln[1]], toppings: [angebotToppings[1]], preis: 2 };
-console.log(eis1);
 // Ende - Eis zusammenstellen
 //# sourceMappingURL=script.js.map

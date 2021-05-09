@@ -22,7 +22,7 @@ newRecBtn.addEventListener("click", function (): void {
 // Ende - Aufgabe 1
 // Load dynamik content
 window.addEventListener("load", function (): void {
-    insertOptionsEis();
+    displayOptionsOfKategorie(angebotWaffeln);
     console.log("Dom load Event ausgeführt");
 
 })
@@ -30,21 +30,36 @@ window.addEventListener("load", function (): void {
 
 // Eis Options laden
 let optionsEis: HTMLElement = document.getElementById("optionsEis");
+let kategorie: HTMLElement = document.getElementById("kategorie");
+// Temp Cart
+let tempWaffel: Waffel;
+let tempEisKofiguration: EisKonfiguration;
+// Ende - Temp Cart
 
-function insertOptionsEis(): void {
-    angebotWaffeln.forEach(element => {
+function displayOptionsOfKategorie(_displayItems: any[]): void {
+    _displayItems.forEach(element => {
         let domItem: HTMLElement = document.createElement("div");
         domItem.classList.add("btn", "options");
-        domItem.innerText = `${element[0]} - ${element.größe} - ${element.preis}€`;
-        console.log(element);
-        console.log(domItem);
+        let displayText: string = "";
+        for (const key in element) {
+            displayText = displayText + element[key];
+            if (key === "preis") {
+                displayText += " €";
+            } else {
+                displayText += " - ";
+            }
+        }
+        domItem.innerText = displayText;
+        domItem.addEventListener("click", function (): void {
+            // console.log(element);
+            tempWaffel = element;
+        });
         optionsEis.appendChild(domItem);
     });
 }
+console.log(tempWaffel);
 // Ende - Eis Options laden
-
 // Eis zusammenstellen
 let eis1: EisKonfiguration = { waffel: angebotWaffeln[1], eiskugeln: [angebotEisskugeln[1]], toppings: [angebotToppings[1]], preis: 2 };
-console.log(eis1);
 // Ende - Eis zusammenstellen
 
