@@ -53,10 +53,13 @@ function displayOptionsOfKategorie(_displayItems: any[]): void {
         domItem.addEventListener("click", function (): void {
             // console.log(element);
             tempWaffel = element;
+            console.log(tempWaffel);
+
         });
         optionsEis.appendChild(domItem);
     });
 }
+
 console.log(tempWaffel);
 // Ende - Eis Options laden
 // Eis zusammenstellen

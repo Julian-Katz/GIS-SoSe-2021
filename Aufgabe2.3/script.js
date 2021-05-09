@@ -48,6 +48,7 @@ function displayOptionsOfKategorie(_displayItems) {
         domItem.addEventListener("click", function () {
             // console.log(element);
             tempWaffel = element;
+            console.log(tempWaffel);
         });
         optionsEis.appendChild(domItem);
     });
