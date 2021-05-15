@@ -31,11 +31,9 @@ if(weiterBtn !== null) {
         }
     });
 }
-
 // Ende - Load dynamik content
 
 // Eis Options laden
-
 function displayOptionsOfKategorie(_displayItems: any[]): void {
     _displayItems.forEach(element => {
         let domElement: HTMLElement = document.createElement("div");
