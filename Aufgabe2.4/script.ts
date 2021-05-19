@@ -2,19 +2,25 @@ let optionsEis: HTMLElement = document.getElementById("optionsEis");
 let konfigList: HTMLElement = document.getElementById("currentEis");
 let kategorie: HTMLElement = document.getElementById("kategorie");
 let site: number = 0;
-function loadJsonContent(_content: string): any {
-    return JSON.parse(_content);
+function loadJsonWaffeln(): Waffel[] {
+    return JSON.parse(angebotWaffeln);
+}
+function loadJsonEiskugeln(): Eiskugel[] {
+    return JSON.parse(angebotEiskugeln);
+}
+function loadJsonTopping(): Topping[] {
+    return JSON.parse(angebotToppings);
 }
 
+
 // Load dynamik content
-window.addEventListener("load", function (): void {
-    if (site === 3 ) {
-        displayKonfigFromLocalStorage(konfigList);
-    } else {
-    displayOptionsOfKategorie(loadJsonContent(angebotWaffeln)); 
+if (site === 3 ) {
     displayKonfigFromLocalStorage(konfigList);
-    }
-});
+} else {
+displayOptionsOfWaffel(); 
+displayKonfigFromLocalStorage(konfigList);
+}
+
 
 let weiterBtn: HTMLElement = document.getElementById("weiter");
 if(weiterBtn !== null) {
@@ -22,10 +28,10 @@ if(weiterBtn !== null) {
         site++;
         if (site === 1){
             clearOptionList();
-            displayOptionsOfKategorie(loadJsonContent(angebotEisskugeln)); 
+            displayOptionsOfEiskugel(); 
         } else if (site === 2) {
             clearOptionList();
-            displayOptionsOfKategorie(loadJsonContent(angebotToppings));
+            displayOptionsOfTopping();
         } else if ( site === 3) {
             window.location.href = "./konfig.html";
         }
@@ -34,17 +40,19 @@ if(weiterBtn !== null) {
 // Ende - Load dynamik content
 
 // Eis Options laden
-function displayOptionsOfKategorie(_displayItems: any[]): void {
-    _displayItems.forEach(element => {
+function displayOptionsOfWaffel(): void {
+    loadJsonWaffeln().forEach(element => {
         let domElement: HTMLElement = document.createElement("div");
         domElement.classList.add("btn", "options");
         let displayText: string = "";
         for (const key in element) {
-            displayText = displayText + element[key];
-            if (key === "preis") {
-                displayText += " €";
-            } else {
-                displayText += " - ";
+            if (key !== "img") {
+                displayText = displayText + element[key];
+                if (key === "preis") {
+                    displayText += " €";
+                } else {
+                    displayText += " - ";
+                }
             }
         }
         domElement.innerText = displayText;
@@ -52,7 +60,73 @@ function displayOptionsOfKategorie(_displayItems: any[]): void {
             optionsEis.appendChild(domElement);
         }
         domElement.addEventListener("click", function (_event: Event): void {
-            let eisKonfig: any[];
+            let eisKonfig: Object[];
+            eisKonfig = JSON.parse(localStorage.getItem("eisKonfig"));
+            if (eisKonfig === null) {
+                eisKonfig = [];
+            }
+            eisKonfig.push(element);
+            localStorage.setItem("eisKonfig", JSON.stringify(eisKonfig));
+            clearKonfigList();
+            displayKonfigFromLocalStorage(konfigList);
+        });
+    });
+}
+
+function displayOptionsOfEiskugel(): void {
+    loadJsonEiskugeln().forEach(element => {
+        let domElement: HTMLElement = document.createElement("div");
+        domElement.classList.add("btn", "options");
+        let displayText: string = "";
+        for (const key in element) {
+            if (key !== "img") {
+                displayText = displayText + element[key];
+                if (key === "preis") {
+                    displayText += " €";
+                } else {
+                    displayText += " - ";
+                }
+            }
+        }
+        domElement.innerText = displayText;
+        if(optionsEis !== null){
+            optionsEis.appendChild(domElement);
+        }
+        domElement.addEventListener("click", function (_event: Event): void {
+            let eisKonfig: Object[];
+            eisKonfig = JSON.parse(localStorage.getItem("eisKonfig"));
+            if (eisKonfig === null) {
+                eisKonfig = [];
+            }
+            eisKonfig.push(element);
+            localStorage.setItem("eisKonfig", JSON.stringify(eisKonfig));
+            clearKonfigList();
+            displayKonfigFromLocalStorage(konfigList);
+        });
+    });
+}
+
+function displayOptionsOfTopping(): void {
+    loadJsonTopping().forEach(element => {
+        let domElement: HTMLElement = document.createElement("div");
+        domElement.classList.add("btn", "options");
+        let displayText: string = "";
+        for (const key in element) {
+            if (key !== "img") {
+                displayText = displayText + element[key];
+                if (key === "preis") {
+                    displayText += " €";
+                } else {
+                    displayText += " - ";
+                }
+            }
+        }
+        domElement.innerText = displayText;
+        if(optionsEis !== null){
+            optionsEis.appendChild(domElement);
+        }
+        domElement.addEventListener("click", function (_event: Event): void {
+            let eisKonfig: Object[];
             eisKonfig = JSON.parse(localStorage.getItem("eisKonfig"));
             if (eisKonfig === null) {
                 eisKonfig = [];
@@ -67,20 +141,31 @@ function displayOptionsOfKategorie(_displayItems: any[]): void {
 
 
 function displayKonfigFromLocalStorage(_displayTo: HTMLElement): void {
-    let eisKonfigArray: any[] = JSON.parse(localStorage.getItem("eisKonfig"));
+    let eisKonfigArray: Object[] = JSON.parse(localStorage.getItem("eisKonfig"));
+    if (eisKonfigArray === null) {
+      eisKonfigArray = [];
+    }
     eisKonfigArray.forEach(element => {
         let domElement: HTMLElement = document.createElement("div");
+        let img: HTMLImageElement = document.createElement("img");
         domElement.classList.add("btn", "options");
         let displayText: string = "";
         for (const key in element) {
-            displayText = displayText + element[key];
-            if (key === "preis") {
-                displayText += " €";
+            if (key !== "img") {
+                displayText = displayText + element[key];
+                if (key === "preis") {
+                    displayText += " €";
+                } else {
+                    displayText += " - ";
+                }
             } else {
-                displayText += " - ";
+                img.src = `./media/${element[key]}`;
             }
         }
-        domElement.innerText = displayText;
+        domElement.appendChild(img);
+        let text: HTMLElement = document.createElement("p");
+        text.innerText = displayText;
+        domElement.appendChild(text);
         _displayTo.appendChild(domElement);
     });
 }
