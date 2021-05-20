@@ -23,10 +23,10 @@ displayKonfigFromLocalStorage(konfigList);
 
 
 let weiterBtn: HTMLElement = document.getElementById("weiter");
-if(weiterBtn !== null) {
+if (weiterBtn !== null) {
         weiterBtn.addEventListener("click", function(_event: Event): void {
         site++;
-        if (site === 1){
+        if (site === 1) {
             clearOptionList();
             displayOptionsOfEiskugel(); 
         } else if (site === 2) {
@@ -56,7 +56,7 @@ function displayOptionsOfWaffel(): void {
             }
         }
         domElement.innerText = displayText;
-        if(optionsEis !== null){
+        if (optionsEis !== null) {
             optionsEis.appendChild(domElement);
         }
         domElement.addEventListener("click", function (_event: Event): void {
@@ -89,7 +89,7 @@ function displayOptionsOfEiskugel(): void {
             }
         }
         domElement.innerText = displayText;
-        if(optionsEis !== null){
+        if (optionsEis !== null) {
             optionsEis.appendChild(domElement);
         }
         domElement.addEventListener("click", function (_event: Event): void {
@@ -122,7 +122,7 @@ function displayOptionsOfTopping(): void {
             }
         }
         domElement.innerText = displayText;
-        if(optionsEis !== null){
+        if (optionsEis !== null) {
             optionsEis.appendChild(domElement);
         }
         domElement.addEventListener("click", function (_event: Event): void {
