@@ -4,7 +4,6 @@ namespace data {
         waffel: Waffel;
         eiskugeln: Eiskugel[];
         toppings: Topping[];
-        preis: number;
     }
 
     interface Waffel {

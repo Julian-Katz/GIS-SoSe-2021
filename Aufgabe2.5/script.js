@@ -191,5 +191,36 @@ var script;
         localStorage.clear();
         window.location.href = "./index.html";
     });
+    // Server Komunikation:
+    async function sendServer() {
+        let url = "https://gis-communication.herokuapp.com";
+        let sendData = JSON.parse(localStorage.getItem("eisKonfig"));
+        let sendDataObjekt = {
+            "Waffel": sendData[0],
+            "Eiskugel": sendData[1],
+            "Topping": sendData[2]
+        };
+        let query = new URLSearchParams(sendDataObjekt);
+        url = url + "?" + query.toString();
+        let response = await fetch(url);
+        let data = await response.json();
+        let body = document.querySelector(".center-container");
+        let messageDom = document.createElement("p");
+        for (const key in data) {
+            if (key === "error") {
+                messageDom.innerHTML = data[key];
+                messageDom.style.color = "red";
+                body.appendChild(messageDom);
+            }
+            else if (key === "message") {
+                messageDom.innerHTML = data[key];
+                messageDom.style.color = "green";
+                body.appendChild(messageDom);
+            }
+        }
+    }
+    if (window.location.href.substr(-12) === "/konfig.html") {
+        sendServer();
+    }
 })(script || (script = {}));
 //# sourceMappingURL=script.js.map

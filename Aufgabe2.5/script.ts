@@ -199,6 +199,42 @@ namespace script {
     });
 
 
+    // Server Komunikation:
+    async function sendServer(): Promise<void> {
+        let url: string = "https://gis-communication.herokuapp.com";
+        let sendData: Object = JSON.parse(localStorage.getItem("eisKonfig"));
+        let sendDataObjekt: Object = {
+            "Waffel": sendData[0],
+            "Eiskugel": sendData[1],
+            "Topping": sendData[2]
+        };
+        let query: URLSearchParams = new URLSearchParams(<any>sendDataObjekt);
+        url = url + "?" + query.toString();
+        let response: Response = await fetch(url);
+        let data: Response = await response.json();
+        let body: HTMLElement = document.querySelector(".center-container");
+        let messageDom: HTMLElement = document.createElement("p");
+        for (const key in data) {
+            if (key === "error") {
+                messageDom.innerHTML = data[key];
+                messageDom.style.color = "red";
+                body.appendChild(messageDom);
+            } else if (key === "message") {
+                messageDom.innerHTML = data[key];
+                messageDom.style.color = "green";
+                body.appendChild(messageDom);
+            }
+        }
+
+
+
+    }
+    if (window.location.href.substr(-12) === "/konfig.html") {
+        sendServer();
+    }
+
+
+
 
 
 
