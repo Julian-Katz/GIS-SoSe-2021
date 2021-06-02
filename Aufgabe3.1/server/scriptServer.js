@@ -27,7 +27,7 @@ var P_3_1Server;
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
         // Schreibt die URL der Anfrage auf Seite
-        _response.write("GUten TAgd");
+        _response.write("Die Daten wurden an den Server übertragen.");
         console.log(`Der Server hat folgendes erhalten: ${_request.url}`);
         // Response beendet
         _response.end();
