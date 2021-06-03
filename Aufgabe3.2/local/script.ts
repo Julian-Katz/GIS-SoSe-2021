@@ -14,7 +14,7 @@ namespace Aufgabe3_2 {
         url = url + "?" + query.toString();
         let response: Response = await fetch(url);
         let responseValueText: string = await response.text();
-        
+
         let body: HTMLBodyElement = document.querySelector("body");
         let htmlElment: HTMLParagraphElement = document.createElement("p");
         htmlElment.innerHTML = responseValueText;
