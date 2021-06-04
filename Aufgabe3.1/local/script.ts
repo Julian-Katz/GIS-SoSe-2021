@@ -2,7 +2,7 @@ namespace Aufgabe3_1 {
     let form: HTMLFormElement = document.forms.namedItem("form");
     form.addEventListener("submit", handleFormSubmit);
 
-    async function handleFormSubmit(_event: Event): Promise<any> {
+    async function handleFormSubmit(_event: Event): Promise<void> {
         _event.preventDefault();
         let url: string = "https://testgisjk.herokuapp.com/";
         // let url: string = "http://localhost:8100/";
