@@ -32,6 +32,6 @@ export namespace P_3_1Server {
         console.log(`Der Server hat folgendes erhalten: ${_request.url}`);
         
         // Response beendet
-        _response.end();   
+        _response.end();  
     }
 }
