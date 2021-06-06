@@ -7,8 +7,8 @@ var Aufgabe3_2;
     form2.addEventListener("submit", handleFormSubmit2);
     async function handleFormSubmit(_event) {
         _event.preventDefault();
-        // let url: string = "https://testgisjk.herokuapp.com/";
-        let url = "http://localhost:8100/";
+        let url = "https://testgisjk.herokuapp.com/";
+        // let url: string = "http://localhost:8100/";
         let formData = new FormData(form);
         let query = new URLSearchParams(formData);
         query.append("type", "html");
