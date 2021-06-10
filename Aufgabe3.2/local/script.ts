@@ -24,7 +24,7 @@ namespace Aufgabe3_2 {
         _event.preventDefault();
         let url: string = "https://testgisjk.herokuapp.com/json/";
         // let url: string = "http://localhost:8100/json/";
-        let formData: FormData = new FormData(form);
+        let formData: FormData = new FormData(form2);
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "?" + query.toString();
         let response: Response = await fetch(url);

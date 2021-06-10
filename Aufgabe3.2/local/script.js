@@ -23,7 +23,7 @@ var Aufgabe3_2;
         _event.preventDefault();
         let url = "https://testgisjk.herokuapp.com/json/";
         // let url: string = "http://localhost:8100/json/";
-        let formData = new FormData(form);
+        let formData = new FormData(form2);
         let query = new URLSearchParams(formData);
         url = url + "?" + query.toString();
         let response = await fetch(url);
