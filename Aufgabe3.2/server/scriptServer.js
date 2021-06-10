@@ -16,12 +16,12 @@ var P_3_2Server;
     function handleRequest(_request, _response) {
         let currentUrl = url.parse(_request.url, true);
         let urlData = currentUrl.query;
-        if (urlData["type"] === "json") {
+        if (currentUrl.pathname === "/json/") {
             _response.setHeader("content-type", "text/json; charset=utf-8");
             _response.setHeader("Access-Control-Allow-Origin", "*");
             _response.write(JSON.stringify(urlData));
         }
-        else if (urlData["type"] === "html") {
+        else if (currentUrl.pathname === "/html/") {
             _response.setHeader("content-type", "text/html; charset=utf-8");
             _response.setHeader("Access-Control-Allow-Origin", "*");
             _response.write(`E-Mail: ${urlData["e-mail"]} Passwort: ${urlData["password"]}`);

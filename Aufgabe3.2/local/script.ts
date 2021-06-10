@@ -6,11 +6,10 @@ namespace Aufgabe3_2 {
 
     async function handleFormSubmit(_event: Event): Promise<void> {
         _event.preventDefault();
-        let url: string = "https://testgisjk.herokuapp.com/";
-        // let url: string = "http://localhost:8100/";
+        let url: string = "https://testgisjk.herokuapp.com/json/";
+        // let url: string = "http://localhost:8100/html/";
         let formData: FormData = new FormData(form);
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        query.append("type", "html");
         url = url + "?" + query.toString();
         let response: Response = await fetch(url);
         let responseValueText: string = await response.text();
@@ -23,11 +22,10 @@ namespace Aufgabe3_2 {
     }
     async function handleFormSubmit2(_event: Event): Promise<void> {
         _event.preventDefault();
-        // let url: string = "https://testgisjk.herokuapp.com/";
-        let url: string = "http://localhost:8100/";
+        let url: string = "https://testgisjk.herokuapp.com/json/";
+        // let url: string = "http://localhost:8100/json/";
         let formData: FormData = new FormData(form);
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        query.append("type", "json");
         url = url + "?" + query.toString();
         let response: Response = await fetch(url);
         let responseValueText: string = await response.json();

@@ -7,11 +7,10 @@ var Aufgabe3_2;
     form2.addEventListener("submit", handleFormSubmit2);
     async function handleFormSubmit(_event) {
         _event.preventDefault();
-        let url = "https://testgisjk.herokuapp.com/";
-        // let url: string = "http://localhost:8100/";
+        let url = "https://testgisjk.herokuapp.com/json/";
+        // let url: string = "http://localhost:8100/html/";
         let formData = new FormData(form);
         let query = new URLSearchParams(formData);
-        query.append("type", "html");
         url = url + "?" + query.toString();
         let response = await fetch(url);
         let responseValueText = await response.text();
@@ -22,11 +21,10 @@ var Aufgabe3_2;
     }
     async function handleFormSubmit2(_event) {
         _event.preventDefault();
-        // let url: string = "https://testgisjk.herokuapp.com/";
-        let url = "http://localhost:8100/";
+        let url = "https://testgisjk.herokuapp.com/json/";
+        // let url: string = "http://localhost:8100/json/";
         let formData = new FormData(form);
         let query = new URLSearchParams(formData);
-        query.append("type", "json");
         url = url + "?" + query.toString();
         let response = await fetch(url);
         let responseValueText = await response.json();
