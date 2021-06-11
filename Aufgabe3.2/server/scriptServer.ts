@@ -24,11 +24,10 @@ export namespace P_3_2Server {
         } else if ( currentUrl.pathname === "/html/"){
             _response.setHeader("content-type", "text/html; charset=utf-8");
             _response.setHeader("Access-Control-Allow-Origin", "*");
-            _response.write(`E-Mail: ${urlData["e-mail"]} Passwort: ${urlData["password"]}`);
+            _response.write(`<p>E-Mail: ${urlData["e-mail"]} Passwort: ${urlData["password"]}</p>`);
 
         }
         _response.end();
     }
-    
 
 }

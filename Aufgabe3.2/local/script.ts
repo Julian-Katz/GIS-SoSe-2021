@@ -15,7 +15,7 @@ namespace Aufgabe3_2 {
         let responseValueText: string = await response.text();
 
         let body: HTMLBodyElement = document.querySelector("body");
-        let htmlElment: HTMLParagraphElement = document.createElement("p");
+        let htmlElment: HTMLParagraphElement = document.createElement("div");
         htmlElment.innerHTML = responseValueText;
         body.appendChild(htmlElment);
 
