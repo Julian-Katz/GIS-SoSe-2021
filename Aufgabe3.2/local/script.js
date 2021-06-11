@@ -14,8 +14,9 @@ var Aufgabe3_2;
         url = url + "?" + query.toString();
         let response = await fetch(url);
         let responseValueText = await response.text();
+        console.log(responseValueText);
         let body = document.querySelector("body");
-        let htmlElment = document.createElement("p");
+        let htmlElment = document.createElement("div");
         htmlElment.innerHTML = responseValueText;
         body.appendChild(htmlElment);
     }
