@@ -6,7 +6,7 @@ namespace Aufgabe3_2 {
 
     async function handleFormSubmit(_event: Event): Promise<void> {
         _event.preventDefault();
-        let url: string = "https://testgisjk.herokuapp.com/json/";
+        let url: string = "https://testgisjk.herokuapp.com/html/";
         // let url: string = "http://localhost:8100/html/";
         let formData: FormData = new FormData(form);
         let query: URLSearchParams = new URLSearchParams(<any>formData);
