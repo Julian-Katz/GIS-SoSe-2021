@@ -33,6 +33,9 @@ var Aufgabe2_2;
     }
     // c
     class Student {
+        name;
+        vorname;
+        matrikelnummer;
         constructor(_name, _vorname, _matrikelnummer) {
             this.name = _name;
             this.vorname = _vorname;
@@ -158,6 +161,10 @@ var Aufgabe2_2;
     // context.fill();
     // b
     class Rectangel {
+        startX;
+        startY;
+        height;
+        width;
         // c
         constructor() {
             this.startX = Math.random() * 500;
