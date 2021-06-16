@@ -7,23 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <form name="form">
         <label for="e-mail">E-mail</label>
         <input type="email" name="e-mail" id="e-mail">
-        <label for="password">Passwort</label>
-        <input type="password" name="password" id="password">
-        <button type="submit">Sumbit /Text</button>
+        <label for="name">Name</label>
+        <input type="name" name="name" id="name">
+        <label for="message">Nachricht</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <label for="consent">Ich Stimme dem Datenschutz usw. zu.</label>
+        <input type="checkbox" name="consent" id="consent" required>
+        <button type="submit">submit</button>
     </form>
-    <form name="form2">
-        <label for="e-mail">E-mail</label>
-        <input type="email" name="e-mail" id="e-mail">
-        <label for="password">Passwort</label>
-        <input type="password" name="password" id="password">
-        <button type="submit">Sumbit /JSON</button>
-    </form>
+    <button id="get-data">Daten abfragen</button>
+    <div id="loaded-data">
+
+    </div>
 </body>
 
 </html>

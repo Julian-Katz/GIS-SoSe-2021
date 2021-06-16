@@ -11,7 +11,7 @@
     "@types/node": "^15.12.0"
   },
   "scripts": {
-    "start": "node Aufgabe3.4/server/scriptServer.js"
+    "start": "node Aufgabe3.4/server/scriptServer.js remote"
   },
   "repository": {
     "type": "git",
