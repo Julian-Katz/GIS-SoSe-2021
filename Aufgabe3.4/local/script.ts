@@ -28,7 +28,7 @@ namespace Aufgabe3_4 {
         responseValues.forEach(responseValue => {
             let htmtlElment: HTMLElement = document.createElement("p");
             htmtlElment.innerHTML = `DB_ID: ${responseValue["_id"]}, e-mail: ${responseValue["e-mail"]}, Name: ${responseValue["name"]}, Nachricht: ${responseValue["message"]}, consent: ${responseValue["consent"]}`;
-            dataDropArea.appendChild(htmtlElment)
+            dataDropArea.appendChild(htmtlElment);
          });
     }
 }
