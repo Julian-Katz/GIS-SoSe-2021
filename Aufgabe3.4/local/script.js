@@ -22,6 +22,7 @@ var Aufgabe3_4;
         let response = await fetch(url);
         let responseValues = await response.json();
         let dataDropArea = document.getElementById("loaded-data");
+        dataDropArea.innerHTML = "";
         responseValues.forEach(responseValue => {
             let htmtlElment = document.createElement("p");
             htmtlElment.innerHTML = `DB_ID: ${responseValue["_id"]}, e-mail: ${responseValue["e-mail"]}, Name: ${responseValue["name"]}, Nachricht: ${responseValue["message"]}, consent: ${responseValue["consent"]}`;

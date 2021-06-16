@@ -24,6 +24,7 @@ namespace Aufgabe3_4 {
         let response: Response = await fetch(url);
         let responseValues: FormData[] = await response.json();
         let dataDropArea: HTMLElement = document.getElementById("loaded-data");
+        dataDropArea.innerHTML = "";
         responseValues.forEach(responseValue => {
             let htmtlElment: HTMLElement = document.createElement("p");
             htmtlElment.innerHTML = `DB_ID: ${responseValue["_id"]}, e-mail: ${responseValue["e-mail"]}, Name: ${responseValue["name"]}, Nachricht: ${responseValue["message"]}, consent: ${responseValue["consent"]}`;
